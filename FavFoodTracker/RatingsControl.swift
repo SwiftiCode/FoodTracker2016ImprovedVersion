@@ -36,7 +36,7 @@ class RatingsControl: UIView {
             let starButton = UIButton()
             
             // Set Image for UIButton under different state
-            starButton.setImage(emptyStarPic, for: UIControlState())
+            starButton.setImage(emptyStarPic, for: UIControl.State())
             starButton.setImage(filledStarPic, for: .selected)
             starButton.setImage(filledStarPic, for: [.highlighted, .selected])
             
@@ -86,7 +86,7 @@ class RatingsControl: UIView {
     // MARK: Actions
     @objc func starTapped(_ star: UIButton) {
         
-        ratings = starCollection.index(of: star)! + 1
+        ratings = starCollection.firstIndex(of: star)! + 1
         
         //print(ratings)
         
